@@ -95,11 +95,13 @@ ul {
   opacity: 0.8;
 }
 .btn--outlined {
+  width: 210px;
+  height: 50px;
+  border-radius: 4px;
   color: var(--white);
-  border-radius: 10px;
   transition-property: background-color;
+  border: 1px solid rgba(59, 67, 76, 0.2);
   will-change: background-color, border-color;
-  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 .btn--outlined:is(:hover, :focus-visible) {
   border-color: transparent;
@@ -110,6 +112,7 @@ ul {
   display: grid;
   row-gap: 10px;
   text-align: center;
+  margin-bottom: 60px;
   justify-content: center;
 }
 .section-title > :first-child {
@@ -416,4 +419,18 @@ h4 {
 .newsletter__submit {
   width: 150px;
   border-radius: 0;
+}
+
+/* Portfolio */
+.portfolio {
+  padding-block: 60px;
+}
+.portfolio__boxes {
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+}
+.portfolio__cta {
+  display: block;
+  margin-top: 40px;
+  margin-inline: auto;
 }
