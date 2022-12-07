@@ -121,10 +121,9 @@ ul {
   text-transform: uppercase;
 }
 .section-title > :last-child {
-  width: 478px;
   height: 62px;
-  max-width: 100%;
   font-size: 16px;
+  max-width: 478px;
   line-height: 30px;
   text-align: center;
   color: var(--black);
@@ -456,4 +455,33 @@ strong {
 .testimonials__quote {
   max-width: 70%;
   font-size: 25px;
+}
+
+/* Team */
+.team {
+  padding-block: 70px;
+}
+.team__grid {
+  row-gap: 40px;
+  column-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+.team__member {
+  opacity: 0.6;
+  row-gap: 14px;
+  transition-duration: 0.3s;
+  will-change: opacity, transform;
+  transition-property: opacity transform;
+}
+.team__member:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+.team__member__image {
+  height: 200px;
+}
+.team__member__social {
+  column-gap: 10px;
+  grid-template-rows: 24px;
+  grid-template-columns: repeat(4, 24px);
 }
