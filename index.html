@@ -8,6 +8,93 @@
     <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
+    <!-- Menu -->
+    <nav class="menu | center-flex absolute w-full index-99">
+      <div class="container between-flex w-full">
+        <a href="/" aria-label="To home page" class="menu__logo">
+          <img aria-hidden="true" src="assets/images/logo.svg" alt="" />
+        </a>
+
+        <button
+          aria-label="Open menu"
+          aria-controls="menu"
+          class="menu__toggler | index-99"
+          onclick="navToggle(event)"
+        >
+          <img aria-hidden="true" src="assets/images/menu/open.svg" alt="" />
+        </button>
+
+        <div class="menu__mobile-links" id="menu">
+          <div class="menu__mobile-links__wrapper | relative grid items-center">
+            <div class="menu__mobile-links__overlay | overlay"></div>
+            <ul class="menu__links | flex align-center mobile-flex-column">
+              <li>
+                <a href="/" class="menu__link | text-uppercase white">home</a>
+              </li>
+              <li>
+                <a href="/" class="menu__link | text-uppercase white"
+                  >about us</a
+                >
+              </li>
+              <li>
+                <a href="/" class="menu__link | text-uppercase white"
+                  >services</a
+                >
+              </li>
+              <li>
+                <a href="/" class="menu__link | text-uppercase white"
+                  >our works</a
+                >
+              </li>
+              <li>
+                <a href="/" class="menu__link | text-uppercase white"
+                  >contact</a
+                >
+              </li>
+            </ul>
+
+            <div class="menu__mobile-social | grid justify-center">
+              <a aria-label="To facebook account" href="/"
+                ><img
+                  aria-hidden="true"
+                  src="assets/images/social/facebook.png"
+                  alt=""
+                  class="w-full h-full"
+              /></a>
+              <a aria-label="To twitter account" href="/"
+                ><img
+                  aria-hidden="true"
+                  src="assets/images/social/twitter.png"
+                  alt=""
+                  class="w-full h-full"
+              /></a>
+              <a aria-label="To google plus account" href="/"
+                ><img
+                  aria-hidden="true"
+                  src="assets/images/social/google-plus.png"
+                  alt=""
+                  class="w-full h-full"
+              /></a>
+              <a aria-label="To dribble account" href="/"
+                ><img
+                  aria-hidden="true"
+                  src="assets/images/social/dribbble.png"
+                  alt=""
+                  class="w-full h-full"
+              /></a>
+              <a aria-label="To behance account" href="/"
+                ><img
+                  aria-hidden="true"
+                  src="assets/images/social/behance.png"
+                  alt=""
+                  class="w-full h-full"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
     <!-- Hero -->
     <header class="hero | center-flex text-center relative">
       <div class="overlay"></div>
@@ -54,5 +141,21 @@
         </svg>
       </a>
     </header>
+
+    <script>
+      function navToggle(e) {
+        let verb;
+        const showClass = "show";
+        const btn = e.currentTarget;
+        const menu = btn.nextElementSibling;
+        const icon = btn.firstElementChild;
+
+        menu.classList.toggle(showClass);
+        verb = menu.classList.contains(showClass) ? "close" : "open";
+
+        btn.ariaLabel = `${verb} menu`;
+        icon.src = `assets/images/menu/${verb}.svg`;
+      }
+    </script>
   </body>
 </html>
