@@ -16,7 +16,8 @@
   box-sizing: border-box;
 }
 input,
-button {
+button,
+textarea {
   border: none;
   font: inherit;
   color: inherit;
@@ -97,10 +98,10 @@ ul {
 .btn--outlined {
   width: 210px;
   height: 50px;
+  border: 1px solid;
   border-radius: 4px;
   color: var(--white);
   transition-property: background-color;
-  border: 1px solid rgba(59, 67, 76, 0.2);
   will-change: background-color, border-color;
 }
 .btn--outlined:is(:hover, :focus-visible) {
@@ -161,7 +162,7 @@ ul {
   color: var(--orange);
 }
 .white {
-  color: var(--white);
+  color: var(--white) !important;
 }
 .black {
   color: var(--black);
@@ -437,6 +438,7 @@ strong {
   display: block;
   margin-top: 40px;
   margin-inline: auto;
+  border: 1px solid rgba(59, 67, 76, 0.2);
 }
 
 /* Testimonials */
@@ -484,4 +486,30 @@ strong {
   column-gap: 10px;
   grid-template-rows: 24px;
   grid-template-columns: repeat(4, 24px);
+}
+
+/* Contact */
+.contact {
+  padding-block: 70px;
+  background-image: url(images/contacts.png);
+}
+.contact__container {
+  row-gap: 15px;
+}
+.contact__input {
+  resize: none;
+  padding: 10px;
+  min-height: 48px;
+  border-radius: 4px;
+  caret-color: var(--white);
+  border: 1px solid var(--white);
+}
+.contact__input::placeholder {
+  opacity: 0.6;
+  color: var(--white);
+}
+.contact__submit {
+  width: 150px;
+  height: 48px;
+  border-radius: 0;
 }

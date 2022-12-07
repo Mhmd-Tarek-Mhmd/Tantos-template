@@ -108,7 +108,11 @@
           eiusmod tempor incididunt ut labore et dolore magna aliqua
         </p>
         <div class="hero__actions | center-flex">
-          <button class="hero__action | btn btn--outlined">hire us</button>
+          <a
+            href="#contact"
+            class="hero__action | btn btn--outlined center-flex"
+            >hire us</a
+          >
           <a
             href="#portfolio"
             class="hero__action | btn btn--outlined center-flex"
@@ -278,7 +282,7 @@
       </div>
 
       <!-- Team -->
-      <div id="team" class="team">
+      <section id="team" class="team">
         <div class="container">
           <div class="section-title">
             <h2>Our <span class="orange">Team</span></h2>
@@ -443,7 +447,50 @@
             </article>
           </div>
         </div>
-      </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="contact | relative">
+        <div aria-hidden="true" class="overlay"></div>
+        <div class="container relative">
+          <div class="section-title">
+            <h2>Say <span class="orange">Hello</span></h2>
+            <p class="white">
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat
+            </p>
+          </div>
+          <form
+            onsubmit="event.preventDefault()"
+            class="contact__container | container grid"
+          >
+            <input
+              type="email"
+              name="email"
+              placeholder="Your email"
+              aria-label="Enter Your email"
+              class="contact__input | black"
+            />
+            <input
+              type="text"
+              name="subject"
+              aria-label="Subject"
+              placeholder="Subject"
+              class="contact__input | white"
+            />
+            <textarea
+              rows="10"
+              name="message"
+              placeholder="Message"
+              aria-label="Message"
+              class="contact__input | white"
+            ></textarea>
+            <button class="contact__submit | btn btn--outlined white h-full">
+              Hire Us
+            </button>
+          </form>
+        </div>
+      </section>
     </main>
 
     <script>
