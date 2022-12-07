@@ -168,6 +168,29 @@
           </article>
         </div>
       </div>
+
+      <!-- Newsletter -->
+      <div
+        role="region"
+        id="newsletter"
+        class="newsletter | relative center-flex"
+      >
+        <div aria-hidden="true" class="overlay"></div>
+        <form
+          onsubmit="event.preventDefault()"
+          class="newsletter__container | container between-flex mobile-flex-column"
+        >
+          <input
+            type="text"
+            class="newsletter__input | h-full"
+            placeholder="Enter Your email adress for newsletter"
+            aria-label="Enter Your email adress for newsletter"
+          />
+          <button class="newsletter__submit | btn btn--outlined white h-full">
+            Subscribe
+          </button>
+        </form>
+      </div>
     </main>
 
     <script>
