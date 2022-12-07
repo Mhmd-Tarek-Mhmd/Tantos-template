@@ -513,3 +513,15 @@ strong {
   height: 48px;
   border-radius: 0;
 }
+
+/* Footer */
+.footer {
+  height: 100px;
+  background-color: var(--black);
+}
+.footer__social {
+  margin-top: 10px;
+  column-gap: 10px;
+  grid-template-rows: 24px;
+  grid-template-columns: repeat(5, 24px);
+}
