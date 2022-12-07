@@ -379,3 +379,20 @@ h4 {
     flex-direction: column;
   }
 }
+
+/* Services */
+.services {
+  padding-block: 70px;
+}
+.services__container {
+  row-gap: 60px;
+  column-gap: 10px;
+}
+@media (min-width: 768px) {
+  .services__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.services__box {
+  row-gap: 10px;
+}
