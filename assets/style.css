@@ -416,6 +416,10 @@ h4 {
   caret-color: var(--white);
   border: 1px solid var(--white);
 }
+.newsletter__input::placeholder {
+  opacity: 0.6;
+  color: var(--white);
+}
 .newsletter__submit {
   width: 150px;
   border-radius: 0;
