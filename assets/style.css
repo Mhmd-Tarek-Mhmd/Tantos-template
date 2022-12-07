@@ -271,7 +271,8 @@ body {
 }
 h2,
 h3,
-h4 {
+h4,
+strong {
   font-weight: 600;
 }
 
@@ -437,4 +438,22 @@ h4 {
   display: block;
   margin-top: 40px;
   margin-inline: auto;
+}
+
+/* Testimonials */
+.testimonials {
+  height: 500px;
+  background-image: url(images/testimonials.png);
+}
+.testimonials__grid {
+  row-gap: 10px;
+}
+.testimonials__avatar {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+}
+.testimonials__quote {
+  max-width: 70%;
+  font-size: 25px;
 }
